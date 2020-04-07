@@ -22,7 +22,6 @@ public class AlbumsUpdateScheduler {
         this.albumsUpdater = albumsUpdater;
     }
 
-
     @Scheduled(initialDelay = 15 * SECONDS, fixedRate = 2 * MINUTES)
     public void run() {
         try {
@@ -34,5 +33,6 @@ public class AlbumsUpdateScheduler {
         } catch (Throwable e) {
             logger.error("Error while updating albums", e);
         }
+
     }
 }
